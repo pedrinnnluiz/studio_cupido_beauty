@@ -1,0 +1,1 @@
+# studio_cupido_beauty
