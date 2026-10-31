@@ -237,3 +237,156 @@ a.is-pending{cursor:not-allowed}
 .soc-ico{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid var(--line-d);transition:background .25s,transform .25s}
 .soc-ico svg{width:18px;height:18px;fill:currentColor}
 .ft a.soc:hover .soc-ico{background:var(--sky);color:var(--deep);transform:translateY(-2px)}
+
+/* ===== Home: hero com foto do barbeiro no fundo e título animado ===== */
+@property --sh{syntax:'<length>';inherits:true;initial-value:0px}
+.hz .hero2{min-height:min(100svh,980px);display:flex;flex-direction:column;justify-content:flex-end;padding:170px 0 150px}
+.hz .hero2>.wrap{width:100%}
+.hz .h2-bg{transition:opacity .6s ease,filter .45s ease}
+.hz:not(.is-f) .h2-bg{opacity:0}
+/* foto: entra da direita, com zoom lento */
+.h2-photo{position:absolute;top:0;right:0;bottom:0;width:min(64%,980px);z-index:-2;overflow:hidden;transition:opacity .6s ease;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 18%,#000 46%);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 18%,#000 46%)}
+.h2-photo-img{position:absolute;inset:-24px;filter:saturate(.9) contrast(1.06);
+  transform:translate3d(var(--px,0px),var(--py,0px),0) scale(var(--ps,1));will-change:transform}
+.hz.is-f .h2-photo{opacity:0;pointer-events:none}
+/* sombra: escurece só onde o texto fica (esquerda e base), a foto respira à direita */
+.hz:not(.is-f) .h2-shade{background:
+  linear-gradient(90deg,var(--hero-base) 0%,color-mix(in srgb,var(--hero-base) 82%,transparent) 30%,color-mix(in srgb,var(--hero-base) 20%,transparent) 62%,transparent 80%),
+  linear-gradient(180deg,color-mix(in srgb,var(--hero-base) 55%,transparent) 0%,transparent 26%,transparent 60%,color-mix(in srgb,var(--hero-base) 70%,transparent) 100%)}
+.h2-grain{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* título grande, letra por letra */
+.hero2 .h2-title{font-size:clamp(3rem,6.6vw,6.8rem);line-height:.9;letter-spacing:-.03em;max-width:none;position:relative;z-index:2;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.h2-title .ln{display:block;padding-bottom:.12em;margin-bottom:-.12em;overflow:hidden}
+.h2-title em.ln{padding-right:.12em;margin-top:.04em}
+.h2-title .w{display:inline-block;white-space:nowrap}
+.h2-title .c{display:inline-block;will-change:transform}
+.h2-title em .c{color:transparent;text-shadow:none;
+  background:linear-gradient(100deg,var(--hero-accent) 0,var(--hero-accent) 38%,#FFF4DE 50%,var(--hero-accent) 62%,var(--hero-accent) 100%) no-repeat;
+  background-size:calc(var(--emw,600px) * 3) 100%;background-position:calc(var(--sh) - var(--ox,0px)) 0;-webkit-background-clip:text;background-clip:text}
+.hz .h2-title em{animation:shine 5.5s cubic-bezier(.45,0,.2,1) 2.4s infinite}
+@keyframes shine{0%{--sh:calc(var(--emw,600px) * -2)}55%,100%{--sh:calc(var(--emw,600px) * 0)}}
+
+.js .hz .h2-title .c{transform:translateY(108%) rotate(7deg);opacity:0}
+.js .hz .h2-photo-img{clip-path:inset(0 0 0 100%)}
+.js .hz [data-anim]{opacity:0;transform:translateY(18px)}
+.js .hz .h2-badge{opacity:0;transform:scale(.6) rotate(-40deg)}
+.hz.play .h2-title .c{animation:charIn 1s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.25s + var(--i) * 26ms)}
+.hz.play .h2-photo-img{animation:photoIn 1.8s cubic-bezier(.7,0,.2,1) both}
+.hz.play [data-anim]{animation:fadeUp .9s cubic-bezier(.16,1,.3,1) both}
+.hz.play .h2-eb{animation-delay:.1s}.hz.play .h2-sub{animation-delay:1s}.hz.play .h2-btns{animation-delay:1.15s}
+.hz.play .h2-badge{animation:badgeIn 1.2s cubic-bezier(.16,1,.3,1) 1.3s both}
+@keyframes charIn{from{transform:translateY(108%) rotate(7deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes photoIn{from{clip-path:inset(0 0 0 100%);--ps:1.18}to{clip-path:inset(0);--ps:1}}
+@property --ps{syntax:'<number>';inherits:true;initial-value:1}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes badgeIn{from{opacity:0;transform:scale(.6) rotate(-40deg)}to{opacity:1;transform:none}}
+.h2-eb{letter-spacing:.32em}
+
+/* selo giratório */
+.h2-badge{position:absolute;right:0;bottom:0;z-index:3;width:156px;height:156px;display:grid;place-items:center;border-radius:50%;color:#fff;
+  background:color-mix(in srgb,var(--hero-base) 45%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid color-mix(in srgb,var(--hero-accent) 45%,transparent)}
+.h2-badge>svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 18s linear infinite}
+.h2-badge text{font:600 13.5px var(--body);letter-spacing:.24em;text-transform:uppercase;fill:currentColor}
+.h2-badge-ic{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--hero-accent);color:#071827;transform:rotate(90deg);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.h2-badge:hover .h2-badge-ic{transform:rotate(90deg) scale(1.12)}
+.h2-badge:hover>svg{animation-duration:6s}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:940px){
+  .hz .hero2{min-height:100svh;padding:120px 0 120px}
+  .h2-photo{width:100%;height:78%;bottom:auto;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
+  .h2-photo-img{background-position:50% 12%}
+  .hz:not(.is-f) .h2-shade{background:linear-gradient(180deg,color-mix(in srgb,var(--hero-base) 55%,transparent) 0%,transparent 22%,color-mix(in srgb,var(--hero-base) 45%,transparent) 48%,var(--hero-base) 82%)}
+  .hero2 .h2-title{font-size:clamp(2.7rem,12vw,4.4rem)}
+  .h2-badge{width:104px;height:104px;bottom:auto;top:-8px;right:0}
+  .h2-badge text{font-size:15px}
+  .h2-badge-ic{width:40px;height:40px}
+  .h2-slide[data-slide="m"] .h2-badge{position:absolute}
+}
+@media(max-width:560px){.h2-badge{display:none}}
+
+@media(prefers-reduced-motion:reduce){
+  .js .hz .h2-title .c,.js .hz [data-anim],.js .hz .h2-badge{opacity:1;transform:none}
+  .js .hz .h2-photo-img{clip-path:none}
+  .hz.play .h2-title .c,.hz.play .h2-photo-img,.hz.play [data-anim],.hz.play .h2-badge,.h2-badge>svg,.hz .h2-title em{animation:none}
+}
+@media(max-width:560px){.h2-eb{letter-spacing:.2em;font-size:11px}.hz .h2-pick{margin-top:40px}}
+
+/* ===== Hero: recortes do proprietário (terno azul no Masculino, terno vinho no Feminino) ===== */
+.hz .h2-bg{opacity:0}
+.h2-photo{width:min(58%,880px);-webkit-mask-image:none;mask-image:none}
+.h2-photo::before{content:"";position:absolute;right:8%;bottom:4%;width:78%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--hero-accent) 30%,transparent) 0%,color-mix(in srgb,var(--hero-accent) 8%,transparent) 45%,transparent 70%);
+  transform:translate3d(calc(var(--px,0px) * -.5),calc(var(--py,0px) * -.5),0)}
+.h2-photo::after{content:"";position:absolute;right:16%;bottom:12%;width:62%;aspect-ratio:1;border-radius:50%;border:1px solid color-mix(in srgb,var(--hero-accent) 35%,transparent)}
+.h2-photo-img{inset:6% 2% 0 0;background:none;filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));transition:opacity .5s ease}
+.h2-photo-img.m{background:url(../images/owner-terno.png) 72% 100%/contain no-repeat}
+.h2-photo-img.f{background:url(../images/owner-terno-vinho.png) 72% 100%/contain no-repeat;opacity:0}
+.hz.is-f .h2-photo{opacity:1;pointer-events:none}
+.hz.is-f .h2-photo-img.m{opacity:0}.hz.is-f .h2-photo-img.f{opacity:1}
+.js .hz.is-f .h2-photo-img.m{clip-path:inset(0 0 0 100%)}
+.hz.play.is-f .h2-photo-img.m{animation:none}
+.hz.play:not(.is-f) .h2-photo-img.f{animation:none}
+.hz .h2-shade,.hz.is-f .h2-shade{background:
+  linear-gradient(90deg,var(--hero-base) 0%,color-mix(in srgb,var(--hero-base) 70%,transparent) 34%,transparent 60%),
+  linear-gradient(180deg,transparent 60%,color-mix(in srgb,var(--hero-base) 70%,transparent) 100%)}
+.hz.is-f .hero2{background:radial-gradient(120% 90% at 78% 40%,#7A3E52 0%,#572B3A 45%,#33161F 100%)}
+.hz:not(.is-f) .hero2{background:radial-gradient(120% 90% at 78% 40%,#123156 0%,#0B2340 45%,#071827 100%)}
+.hz.is-f .h2-badge-ic{color:#572B3A}
+@media(max-width:940px){
+  .h2-photo{width:100%;height:66%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
+  .h2-photo-img.m,.h2-photo-img.f{background-position:50% 0;background-size:auto 100%;inset:96px 0 0}
+  .h2-photo::before{right:50%;transform:translateX(50%);bottom:8%;width:120%}
+  .h2-photo::after{display:none}
+  .hz .h2-shade,.hz.is-f .h2-shade{background:linear-gradient(180deg,transparent 0%,transparent 34%,color-mix(in srgb,var(--hero-base) 55%,transparent) 52%,var(--hero-base) 72%)}
+}
+@media(max-width:940px){
+  .hz .hero2{padding-top:400px;justify-content:flex-start}
+  .h2-photo{height:500px;top:0}
+  .h2-photo-img.m,.h2-photo-img.f{inset:88px 0 0}
+  .hz .h2-shade,.hz.is-f .h2-shade{background:linear-gradient(180deg,transparent 0,transparent 300px,color-mix(in srgb,var(--hero-base) 60%,transparent) 400px,var(--hero-base) 520px)}
+  .h2-pick .res-pick-l,.hz .h2-eb{display:none}
+}
+
+/* ===== Botões: animações em todo o site ===== */
+.btn,.chip-f,.seg button,.bk-item,.ft-bk,.nav a,.burger{position:relative;overflow:hidden;isolation:isolate}
+.btn{transition:background .3s,color .3s,border-color .3s,box-shadow .4s,translate .45s cubic-bezier(.16,1,.3,1),scale .18s ease}
+.btn:not(.is-pending):hover{translate:var(--mx,0px) calc(var(--my,0px) - 3px);box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+.btn:not(.is-pending):active{scale:.96;transition-duration:.08s}
+/* brilho que atravessa o botão */
+.btn::after{content:"";position:absolute;inset:-1px;z-index:-1;pointer-events:none;
+  background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.55) 48%,rgba(255,255,255,.15) 55%,transparent 72%);transform:translateX(-130%)}
+.btn:not(.is-pending):hover::after{transform:translateX(130%);transition:transform .85s cubic-bezier(.16,1,.3,1)}
+.btn-o::after{background:linear-gradient(110deg,transparent 25%,rgba(214,180,131,.35) 50%,transparent 72%)}
+/* seta: sai pela direita e volta pela esquerda */
+.btn svg{transition:none}
+.btn:not(.is-pending):hover svg,.bk-item:hover svg{animation:arrowLoop .55s cubic-bezier(.65,0,.35,1)}
+@keyframes arrowLoop{0%{transform:none}45%{transform:translateX(130%);opacity:0}46%{transform:translateX(-130%);opacity:0}100%{transform:none;opacity:1}}
+/* onda no clique */
+.rp{position:absolute;border-radius:50%;pointer-events:none;z-index:-1;width:var(--s);height:var(--s);left:var(--x);top:var(--y);margin:calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+  background:currentColor;opacity:.28;transform:scale(0);animation:ripple .65s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes ripple{to{transform:scale(1);opacity:0}}
+/* demais botões: leve pulo e clique */
+.chip-f,.seg button,.bk-item,.ft-bk,.burger{transition:background .3s,color .3s,border-color .3s,translate .35s cubic-bezier(.16,1,.3,1),scale .15s ease}
+.chip-f:hover,.bk-item:hover,.burger:hover{translate:0 -2px}
+.chip-f:active,.seg button:active,.bk-item:active,.burger:active,.nav a:active{scale:.95}
+/* links de texto: sublinhado que se desenha */
+.link{border-bottom-color:transparent;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1.5px no-repeat;transition:background-size .45s cubic-bezier(.65,0,.35,1),color .2s}
+.link:hover{background-size:0 1.5px;background-position:100% 100%;animation:underline .9s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes underline{0%{background-size:100% 1.5px;background-position:100% 100%}45%{background-size:0 1.5px;background-position:100% 100%}46%{background-size:0 1.5px;background-position:0 100%}100%{background-size:100% 1.5px;background-position:0 100%}}
+/* menu: pílula aparece de baixo */
+.nav a:not(.on)::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:99px;background:rgba(255,255,255,.12);transform:scale(.6);opacity:0;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .25s}
+.nav a:not(.on):hover::before{transform:none;opacity:1}
+.hd:not(.over) .nav a:not(.on)::before{background:color-mix(in srgb,var(--navy) 10%,transparent)}
+/* entrada ao rolar (igual à home) */
+.js .rv{opacity:0}
+.rv.in{animation:fadeUp .9s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0s)}
+@media(prefers-reduced-motion:reduce){
+  .js .rv{opacity:1}.rv.in{animation:none}
+  .btn:hover,.chip-f:hover,.bk-item:hover,.burger:hover{translate:none!important}
+  .btn::after,.rp{display:none}
+  .btn:hover svg,.bk-item:hover svg,.link:hover{animation:none}
+}

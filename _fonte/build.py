@@ -121,7 +121,7 @@ def doc(title, body, body_cls=''):
             f'<title>{title}</title><meta name="description" content="Studio Cupido, barbearia e estética. Protótipo visual.">'
             f'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
             f'<link rel="stylesheet" href="{FONTS}"><link rel="stylesheet" href="css/style.css">'
-            f'<style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}</style></head>'
+            f'<script>document.documentElement.classList.add("js")</script><style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}</style></head>'
             f'<body{bc}>\n{body}\n<script src="js/config.js"></script><script src="js/ui.js"></script></body></html>\n')
 
 def header(active, over=False):
@@ -193,25 +193,23 @@ def choice(area, h2, lead, cls, theme=''):
 
 home = f'''
 <div class="hz" id="hz" data-mode="m">
-<section class="hero2 on-dark"><div class="h2-bg"></div><div class="h2-shade"></div><div class="h2-fade" aria-hidden="true"></div>
+<section class="hero2 on-dark"><div class="h2-bg"></div><div class="h2-photo" aria-hidden="true"><div class="h2-photo-img m"></div><div class="h2-photo-img f"></div></div><div class="h2-grain" aria-hidden="true"></div><div class="h2-shade"></div><div class="h2-fade" aria-hidden="true"></div>
  <div class="wrap h2-in">
   <div class="res-pick h2-pick"><span class="res-pick-l">Escolha sua experiência</span><div class="seg" data-k="m" role="group" aria-label="Escolha sua experiência"><span class="seg-ind" aria-hidden="true"></span>
    <button type="button" class="on" data-hero-tab="m" aria-pressed="true">{CHECK}{icon("sym", 18, 1.8)}<span>Masculino</span></button><button type="button" class="f" data-hero-tab="f" aria-pressed="false">{CHECK}{icon("sparkle", 18, 1.8)}<span>Feminino</span></button></div></div>
   <div class="h2-slide" data-slide="m">
-   <div class="h2-ovwrap"><div class="h2-mir a"><img src="images/owner-retrato.jpg" alt="Proprietário do Studio Cupido na barbearia"></div>
-    <a class="h2-circle" href="#experiencias" aria-label="Escolher entre as áreas masculina e feminina"><span>Masculino</span><span>Feminino</span>{icon("arrow", 18, 2)}</a></div>
-   <span class="eyebrow">Studio Cupido · Barbearia &amp; Estética</span>
-   <h1>Muito mais<br>que um corte.<em>É um posicionamento.</em></h1>
-   <p class="h2-sub">Barbearia premium, consultoria de visagismo e estética completa em um só lugar.</p>
-   <div class="h2-btns"><a class="btn btn-p" href="#experiencias">Escolha sua experiência {ARW}</a><a class="btn btn-o" href="historia.html">Nossa história</a></div>
+   <a class="h2-badge" href="#experiencias" aria-label="Escolher entre as áreas masculina e feminina"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bdg" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text textLength="484" lengthAdjust="spacing"><textPath href="#bdg" textLength="484" lengthAdjust="spacing">Studio Cupido · Barbearia premium · </textPath></text></svg><span class="h2-badge-ic">{icon("arrow", 22, 2)}</span></a>
+   <span class="eyebrow h2-eb" data-anim>Studio Cupido · Barbearia &amp; Estética</span>
+   <h1 class="h2-title" data-split aria-label="Muito mais que um corte. É um posicionamento."><span class="ln">Muito mais</span><span class="ln">que um corte.</span><em class="ln">É um posicionamento.</em></h1>
+   <p class="h2-sub" data-anim>Barbearia premium, consultoria de visagismo e estética completa em um só lugar.</p>
+   <div class="h2-btns" data-anim><a class="btn btn-p" href="#experiencias">Escolha sua experiência {ARW}</a><a class="btn btn-o" href="historia.html">Nossa história</a></div>
   </div>
   <div class="h2-slide" data-slide="f" hidden>
-   <div class="h2-ovwrap"><div class="h2-mir a">{ph(cls="cutout", slot="cat-feminino", person=True, label="", alt="Studio Cupido feminino", style="--cx:60%")}</div>
-    <a class="h2-circle" href="feminino.html" aria-label="Conheça o Feminino"><span>Conheça</span><span>o Feminino</span>{icon("arrow", 18, 2)}</a></div>
-   <span class="eyebrow">Studio Cupido · Estética &amp; Beleza</span>
-   <h1>Muito mais<br>que beleza.<em>É identidade.</em></h1>
-   <p class="h2-sub">Estética completa, com escuta, técnica e espaço para você ser você.</p>
-   <div class="h2-btns">{book("feminino")}<a class="btn btn-o" href="feminino.html">Conheça o Feminino</a></div>
+   <a class="h2-badge" href="feminino.html" aria-label="Conheça o Feminino"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bdgf" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text textLength="484" lengthAdjust="spacing"><textPath href="#bdgf" textLength="484" lengthAdjust="spacing">Studio Cupido · Estética &amp; beleza · </textPath></text></svg><span class="h2-badge-ic">{icon("arrow", 22, 2)}</span></a>
+   <span class="eyebrow h2-eb" data-anim>Studio Cupido · Estética &amp; Beleza</span>
+   <h1 class="h2-title" data-split aria-label="Muito mais que beleza. É identidade."><span class="ln">Muito mais</span><span class="ln">que beleza.</span><em class="ln">É identidade.</em></h1>
+   <p class="h2-sub" data-anim>Estética completa, com escuta, técnica e espaço para você ser você.</p>
+   <div class="h2-btns" data-anim>{book("feminino")}<a class="btn btn-o" href="feminino.html">Conheça o Feminino</a></div>
   </div>
  </div></section>
 <div class="feat-wrap"><div class="wrap"><div class="feat">

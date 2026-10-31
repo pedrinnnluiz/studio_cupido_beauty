@@ -85,7 +85,7 @@ window.CUPIDO_CONFIG = {
     'equipe':       '',                     // Equipe reunida
     'atendimentos': '',                     // Profissionais durante os atendimentos
     'cat-masculino':'images/owner-terno.png',   // Imagem principal do Masculino (recorte PNG)
-    'cat-feminino': 'images/owner-terno-vermelho.png', // Imagem principal do Feminino (recorte PNG)
+    'cat-feminino': 'images/owner-terno-vinho.png', // Imagem principal do Feminino (recorte PNG)
     'pro-1':        'images/amadeu.jpg',        // Amadeu Diaz
     'pro-2':        '',                         // Dom Bigode
     'pro-3':        '',                         // Gustavo Adrian
