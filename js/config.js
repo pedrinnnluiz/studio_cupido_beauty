@@ -29,20 +29,20 @@ window.CUPIDO_CONFIG = {
       'combo': '',                             // Masculino · Corte e barba
       'trat': '',                              // Masculino · Tratamento capilar
       'protese': '',                           // Masculino · Manutenção de Prótese Capilar
-      'visag': '',                             // Masculino · Consultoria Visagismo
-      'coloracao-retoque-de-raiz': '',         // Feminino · Coloração - Retoque de Raiz
+      'visag': '',                             // Masculino · Consultoria de Visagismo
+      'coloracao-retoque-de-raiz': '',         // Feminino · Coloração – Retoque de Raiz
       'coloracao-global': '',                  // Feminino · Coloração Global
       'tonalizacao': '',                       // Feminino · Tonalização
       'luzes-curto': '',                       // Feminino · Luzes Curto
       'luzes-medio': '',                       // Feminino · Luzes Médio
       'corte-feminino': '',                    // Feminino · Corte Feminino
       'combo-corte-e-escova': '',              // Feminino · Combo Corte e Escova
-      'corte-hidratacao-escova-promocional': '', // Feminino · CORTE HIDRATACAO ESCOVA PROMOCIONAL
+      'corte-hidratacao-e-escova-promocional': '', // Feminino · Corte, Hidratação e Escova (promocional)
       'escova-curta': '',                      // Feminino · Escova Curta
       'escova-media': '',                      // Feminino · Escova Média
       'escova-longa': '',                      // Feminino · Escova Longa
       'escova-extra-longa': '',                // Feminino · Escova Extra Longa
-      'baby-liss': '',                         // Feminino · Baby Liss
+      'babyliss': '',                          // Feminino · Babyliss
       'prancha': '',                           // Feminino · Prancha
       'efeito-sirena': '',                     // Feminino · Efeito Sirena
       'lavagem-e-secagem': '',                 // Feminino · Lavagem e Secagem
@@ -57,7 +57,7 @@ window.CUPIDO_CONFIG = {
       'progressiva-longa': '',                 // Feminino · Progressiva Longa
       'progressiva-extra-longa': '',           // Feminino · Progressiva Extra Longa
       'cronograma-capilar-completo': '',       // Feminino · Cronograma Capilar Completo
-      'manutencao-meha-hair-ate-10-fitas': '', // Feminino · Manutenção Meha Hair até 10 fitas
+      'manutencao-mega-hair-ate-10-fitas': '', // Feminino · Manutenção Mega Hair até 10 fitas
       'manutencao-mega-hair-20-fitas': '',     // Feminino · Manutenção Mega Hair 20 fitas
       'manutencao-mega-hair-30-fitas': '',     // Feminino · Manutenção Mega Hair 30 fitas
       'design-personalizado': '',              // Feminino · Design Personalizado
@@ -65,13 +65,13 @@ window.CUPIDO_CONFIG = {
       'design-buco-queixo': '',                // Feminino · Design + Buço + Queixo
       'design-com-henna': '',                  // Feminino · Design com Henna
       'design-com-tintura': '',                // Feminino · Design com Tintura
-      'henna-somente': '',                     // Feminino · Henna somente
-      'tintura-sobrancelha-somente': '',       // Feminino · Tintura Sobrancelha somente
+      'somente-henna': '',                     // Feminino · Somente Henna
+      'somente-tintura-de-sobrancelha': '',    // Feminino · Somente Tintura de Sobrancelha
       'brow-lamination': '',                   // Feminino · Brow Lamination
       'fort-brows': '',                        // Feminino · Fort Brows
-      'spa-das-sobrancelhas': '',              // Feminino · SPA das Sobrancelhas
+      'spa-das-sobrancelhas': '',              // Feminino · Spa das Sobrancelhas
       'lash-lifting': '',                      // Feminino · Lash Lifting
-      'classico-fio-a-fio': '',                // Feminino · Classico Fio a Fio
+      'classico-fio-a-fio': '',                // Feminino · Clássico Fio a Fio
       'volume-brasileiro': '',                 // Feminino · Volume Brasileiro
       'mega-volume-brasileiro': '',            // Feminino · Mega Volume Brasileiro
       'volume-egipcio': '',                    // Feminino · Volume Egípcio
@@ -79,7 +79,7 @@ window.CUPIDO_CONFIG = {
       'volume-luxo': '',                       // Feminino · Volume Luxo
       'fox-eyes': '',                          // Feminino · Fox Eyes
       'manutencao-lash': '',                   // Feminino · Manutenção Lash
-      'lash-brow-hidra': '',                   // Feminino · Lash, + Brow + Hidra
+      'lash-brow-hidra': '',                   // Feminino · Lash + Brow + Hidra
       'micro-sobrancelha': '',                 // Feminino · Micro Sobrancelha
       'micro-sobrancelha-retoque': '',         // Feminino · Micro Sobrancelha Retoque
       'micro-labial': '',                      // Feminino · Micro Labial
@@ -89,26 +89,26 @@ window.CUPIDO_CONFIG = {
       'glow-u': '',                            // Feminino · Glow U
       'buco': '',                              // Feminino · Buço
       'epilacao-facial': '',                   // Feminino · Epilação Facial
-      'epilacao-partes': '',                   // Feminino · Epilação Partes
+      'epilacao-por-partes': '',               // Feminino · Epilação por Partes
       'manicure': '',                          // Feminino · Manicure
       'pedicure': '',                          // Feminino · Pedicure
       'manicure-e-pedicure': '',               // Feminino · Manicure e Pedicure
       'esmaltacao-comum': '',                  // Feminino · Esmaltação Comum
       'esmaltacao-em-gel': '',                 // Feminino · Esmaltação em Gel
-      'spa-dos-pes': '',                       // Feminino · SPA dos Pés
+      'spa-dos-pes': '',                       // Feminino · Spa dos Pés
       'maquiagem': '',                         // Feminino · Maquiagem
       'penteado': '',                          // Feminino · Penteado
       'penteado-e-maquiagem': '',              // Feminino · Penteado e Maquiagem
-      'avaliacao': '',                         // Feminino · AVALIAÇÃO
+      'avaliacao': '',                         // Feminino · Avaliação
     },
 
     /* Opcional: URL direta de cada profissional (barbeiros e Studio Cupido Beauty). */
     profissionais: {
       1: '',    // Amadeu Diaz (Barbearia)
       2: '',    // Dom Bigode (Barbearia)
-      3: '',    // Gustavo Adrian (Barbearia)
+      3: '',    // Gustavo (Barbearia)
       4: '',    // Matheus (Barbearia)
-      5: '',    // Barbeiro 05 (Barbearia)
+      5: '',    // Adrian (Barbearia)
       6: '',    // Chrys Gerbo (Studio Cupido Beauty)
       7: '',    // Carolina (Studio Cupido Beauty)
       8: '',    // Cinthia (Studio Cupido Beauty)
@@ -124,9 +124,9 @@ window.CUPIDO_CONFIG = {
   },
   contato: {
     endereco:  'Rua Raul Pompéia, 195 · Vila Jardini · 18044-020 · Sorocaba/SP',
-    whatsapp:  'https://api.whatsapp.com/send/?phone=15996148166&text=Olá%2C+gostaria+de+fazer+um+agendamento&type=phone_number&app_absent=0&utm_source=ig',
+    whatsapp:  'https://api.whatsapp.com/send/?phone=5515996148166&text=Olá%2C+gostaria+de+fazer+um+agendamento&type=phone_number&app_absent=0&utm_source=ig',
     instagram: 'https://www.instagram.com/studiocupidooficial/',
-    email:     '',   // [PENDENTE]
+    email:     'atendimento@studiocupido.com.br',
     outros: [        // [OPCIONAL] outros canais oficiais: { nome: 'TikTok', url: 'https://...' }
     ]
   },
@@ -171,9 +171,9 @@ window.CUPIDO_CONFIG = {
     'cat-feminino': 'images/owner-terno-vinho.png', // Imagem principal do Feminino (recorte PNG)
     'pro-1':        'images/amadeu.jpg',        // Amadeu Diaz
     'pro-2':        '',                         // Dom Bigode
-    'pro-3':        '',                         // Gustavo Adrian
+    'pro-3':        '',                         // Gustavo
     'pro-4':        '',                         // Matheus
-    'pro-5':        '',                         // Barbeiro 05 (a definir)
+    'pro-5':        '',                         // Adrian
     'pro-6':        'images/chrys-gerbo.jpg',   // Chrys Gerbo
     'pro-7':        'images/carolina.jpg',      // Carolina
     'pro-8':        'images/cinthia.jpg'        // Cinthia
