@@ -17,25 +17,25 @@ SERVICES = [
  dict(id='combo', area='masculino', group='Barbearia', name='Corte e barba', desc='O atendimento completo em uma única visita.', min=None, price=None, tbc=True),
  dict(id='trat', area='masculino', group='Barbearia', name='Tratamento capilar', desc='Cuidado para fios e couro cabeludo, indicado conforme a sua necessidade.', min=None, price=None, tbc=True),
  dict(id='protese', area='masculino', group='Barbearia', name='Manutenção de Prótese Capilar', desc='', min=90, price=None),
- dict(id='visag', area='masculino', group='Barbearia', name='Consultoria Visagismo', desc='Análise de traços e proporções para definir a imagem que valoriza a sua identidade.', min=150, price=None),
+ dict(id='visag', area='masculino', group='Barbearia', name='Consultoria de Visagismo', desc='Análise de traços e proporções para definir a imagem que valoriza a sua identidade.', min=150, price=None),
 ]
 # Feminino: lista do aplicativo de agendamento (nome | preço, None = "Consultar" | minutos | descrição opcional)
 _FEM = {
- 'Cabelo': [('Coloração - Retoque de Raiz', None, 105), ('Coloração Global', None, 120), ('Tonalização', None, 75), ('Luzes Curto', None, 240, 'até 70g de pó descolorante'),
-            ('Luzes Médio', None, 255, 'de 71 até 100g de pó descolorante'), ('Corte Feminino', None, 60), ('Combo Corte e Escova', None, 60), ('CORTE HIDRATACAO ESCOVA PROMOCIONAL', 150, 75),
-            ('Escova Curta', None, 45), ('Escova Média', None, 60), ('Escova Longa', None, 75), ('Escova Extra Longa', None, 90), ('Baby Liss', None, 45), ('Prancha', None, 30), ('Efeito Sirena', None, 105),
+ 'Cabelo': [('Coloração – Retoque de Raiz', None, 105), ('Coloração Global', None, 120), ('Tonalização', None, 75), ('Luzes Curto', None, 240, 'até 70g de pó descolorante'),
+            ('Luzes Médio', None, 255, 'de 71 até 100g de pó descolorante'), ('Corte Feminino', None, 60), ('Combo Corte e Escova', None, 60), ('Corte, Hidratação e Escova (promocional)', 150, 75),
+            ('Escova Curta', None, 45), ('Escova Média', None, 60), ('Escova Longa', None, 75), ('Escova Extra Longa', None, 90), ('Babyliss', None, 45), ('Prancha', None, 30), ('Efeito Sirena', None, 105),
             ('Lavagem e Secagem', None, 60), ('Hidratação', None, 60), ('Nutrição', None, 60), ('Reconstrução', None, 60), ('Cauterização', None, 90), ('Botox Capilar', None, 120), ('Selagem', None, 120),
             ('Progressiva Curta', None, 120), ('Progressiva Média', None, 150), ('Progressiva Longa', None, 180), ('Progressiva Extra Longa', None, 195), ('Cronograma Capilar Completo', 600, 240)],
- 'Mega hair': [('Manutenção Meha Hair até 10 fitas', None, 150), ('Manutenção Mega Hair 20 fitas', None, 150), ('Manutenção Mega Hair 30 fitas', None, 150)],
+ 'Mega Hair': [('Manutenção Mega Hair até 10 fitas', None, 150), ('Manutenção Mega Hair 20 fitas', None, 150), ('Manutenção Mega Hair 30 fitas', None, 150)],
  'Sobrancelhas': [('Design Personalizado', None, 45), ('Design e Buço', None, 45), ('Design + Buço + Queixo', None, 60), ('Design com Henna', None, 60), ('Design com Tintura', None, 60),
-                  ('Henna somente', None, 30), ('Tintura Sobrancelha somente', None, 30), ('Brow Lamination', None, 90), ('Fort Brows', None, 30), ('SPA das Sobrancelhas', None, 60)],
- 'Cílios': [('Lash Lifting', None, 60), ('Classico Fio a Fio', None, 90), ('Volume Brasileiro', None, 90), ('Mega Volume Brasileiro', None, 105), ('Volume Egípcio', None, 105), ('Volume Inglês', None, 105),
-            ('Volume Luxo', None, 120), ('Fox Eyes', None, 105), ('Manutenção Lash', None, 105), ('Lash, + Brow + Hidra', None, 210)],
+                  ('Somente Henna', None, 30), ('Somente Tintura de Sobrancelha', None, 30), ('Brow Lamination', None, 90), ('Fort Brows', None, 30), ('Spa das Sobrancelhas', None, 60)],
+ 'Cílios': [('Lash Lifting', None, 60), ('Clássico Fio a Fio', None, 90), ('Volume Brasileiro', None, 90), ('Mega Volume Brasileiro', None, 105), ('Volume Egípcio', None, 105), ('Volume Inglês', None, 105),
+            ('Volume Luxo', None, 120), ('Fox Eyes', None, 105), ('Manutenção Lash', None, 105), ('Lash + Brow + Hidra', None, 210)],
  'Micropigmentação': [('Micro Sobrancelha', None, 120), ('Micro Sobrancelha Retoque', None, 90), ('Micro Labial', None, 120), ('Micro Labial Retoque', None, 90)],
- 'Pele e epilação': [('Limpeza de Pele', None, 60), ('Revitalização Facial', None, 60), ('Glow U', None, 90), ('Buço', None, 30), ('Epilação Facial', None, 45), ('Epilação Partes', None, 30)],
- 'Unhas e pés': [('Manicure', None, 60), ('Pedicure', None, 60), ('Manicure e Pedicure', None, 120), ('Esmaltação Comum', None, 30), ('Esmaltação em Gel', None, 45), ('SPA dos Pés', None, 30)],
+ 'Pele e epilação': [('Limpeza de Pele', None, 60), ('Revitalização Facial', None, 60), ('Glow U', None, 90), ('Buço', None, 30), ('Epilação Facial', None, 45), ('Epilação por Partes', None, 30)],
+ 'Unhas e pés': [('Manicure', None, 60), ('Pedicure', None, 60), ('Manicure e Pedicure', None, 120), ('Esmaltação Comum', None, 30), ('Esmaltação em Gel', None, 45), ('Spa dos Pés', None, 30)],
  'Maquiagem e penteado': [('Maquiagem', None, 90), ('Penteado', None, 90), ('Penteado e Maquiagem', None, 150)],
- 'Avaliação': [('AVALIAÇÃO', 0, 30)],
+ 'Avaliação': [('Avaliação', 0, 30)],
 }
 GROUPS_F = list(_FEM)
 for g, items in _FEM.items():
@@ -51,9 +51,9 @@ PROS = [
       bio='Veio do Nordeste em busca de uma vida melhor e, ao longo do caminho, aperfeiçoou suas habilidades no atendimento ao cliente e no visagismo. Cada corte nasce da conversa e do estudo do rosto de quem está na cadeira.',
       svc=['corte', 'combo', 'visag']),
  dict(id=2, team='barbeiros', name='Dom Bigode', role='Barbeiro', bio=_TBD, svc=[]),
- dict(id=3, team='barbeiros', name='Gustavo Adrian', role='Barbeiro', bio=_TBD, svc=[]),
+ dict(id=3, team='barbeiros', name='Gustavo', role='Barbeiro', bio=_TBD, svc=[]),
  dict(id=4, team='barbeiros', name='Matheus', role='Barbeiro', bio=_TBD, svc=[]),
- dict(id=5, team='barbeiros', name='Barbeiro 05', role='Barbeiro · nome a definir', bio=_TBD, svc=[], tbd=True),
+ dict(id=5, team='barbeiros', name='Adrian', role='Barbeiro', bio=_TBD, svc=[]),
  dict(id=6, team='beauty', name='Chrys Gerbo', role='Especialista em loiros, corte e cor', real=True, spec=['Loiros', 'Corte', 'Cor'],
       bio='Cabeleireiro com mais de 30 anos de experiência, Chrystiano Gerbovitch já atuou com grandes nomes do mercado e já trabalhou com as maiores marcas mundiais do segmento. Hoje residente de Sorocaba, se destaca por sua expertise em loiros, cor e corte, dominando técnicas e ajudando mulheres de todas as idades a encontrarem seu brilho próprio e autenticidade.',
       svc=['coloracao-global', 'luzes-curto', 'luzes-medio', 'tonalizacao', 'corte-feminino']),
@@ -65,6 +65,7 @@ BEAUTY = [p for p in PROS if p['team'] == 'beauty']
 TEAM_AREA = {'barbeiros': 'masculino', 'beauty': 'feminino'}
 def price(s):
     if s.get('tbc'): return '—'
+    if s['price'] == 0: return 'Gratuita'
     return 'Consultar' if s['price'] is None else 'R$ ' + ('%.2f' % s['price']).replace('.', ',')
 def dur(s): return '—' if not s['min'] else f"{s['min']} min"
 AREA = {'masculino': 'Masculino', 'feminino': 'Feminino'}
@@ -107,6 +108,8 @@ FONTS = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0
 NAV = [('index.html', 'Início'), ('masculino.html', 'Masculino'), ('feminino.html', 'Feminino'), ('servicos.html', 'Serviços'),
        ('barbeiros.html', 'Equipe'), ('resultados.html', 'Resultados'), ('historia.html', 'Nossa história'), ('contato.html', 'Contato')]
 PAGES = {}   # nome do arquivo -> html completo
+# Endereço final do site, terminado em '/'. Necessário para a prévia do link (logo) no WhatsApp e nas redes.
+SITE_URL = os.environ.get('SITE_URL', '')
 CHEV = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 
 def book(area, label=None, cls='btn btn-p', svc=None, pro=None, arrow=True):
@@ -119,6 +122,9 @@ def doc(title, body, body_cls=''):
     bc = f' class="{body_cls}"' if body_cls else ''
     return (f'<!doctype html>\n<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
             f'<title>{title}</title><meta name="description" content="Studio Cupido, barbearia e estética. Protótipo visual.">'
+            f'<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"><link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png"><link rel="apple-touch-icon" href="images/apple-touch-icon.png"><meta name="theme-color" content="#071827">'
+            f'<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Studio Cupido"><meta property="og:title" content="{title}">'
+            f'<meta property="og:description" content="Barbearia premium, consultoria de visagismo e estética completa em Sorocaba/SP."><meta property="og:image" content="{SITE_URL}images/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">'
             f'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
             f'<link rel="stylesheet" href="{FONTS}"><link rel="stylesheet" href="css/style.css">'
             f'<script>document.documentElement.classList.add("js")</script><style>:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}</style></head>'
@@ -128,24 +134,27 @@ def header(active, over=False):
     links = ''.join(f'<a href="{h}"{" class=\"on\" aria-current=\"page\"" if h == active else ""}>{t}</a>' for h, t in NAV)
     pop = book('masculino', cls='bk-item', arrow=False) + book('feminino', cls='bk-item f', arrow=False)
     return (f'<header class="hd{" over" if over else ""}" id="hd"><div class="wrap hd-in">'
-            f'<a class="brand" href="index.html" aria-label="Studio Cupido, página inicial"><img src="images/logo.png" alt="Studio Cupido Beauty"></a>'
+            f'<a class="brand" href="index.html" aria-label="Studio Cupido, página inicial"><img src="images/logo-wordmark.png" alt="Studio Cupido Beauty" width="420" height="175"></a>'
             f'<nav class="nav" aria-label="Principal">{links}</nav>'
             f'<div class="hd-act"><div class="bk-menu"><button class="btn btn-p btn-s" type="button" data-act="bk" aria-expanded="false" aria-haspopup="true">Agendar {CHEV}</button>'
             f'<div class="bk-pop">{pop}</div></div>'
             f'<button class="burger" type="button" data-act="menu" aria-label="Abrir menu" aria-expanded="false">{icon("menu", 22, 2)}</button></div></div></header>')
 
+WA_FLOAT = ('<a class="wa-float" data-wa hidden target="_blank" rel="noopener" aria-label="Falar com o Studio Cupido no WhatsApp"><span class="wa-tip">Fale com a gente</span>'
+            '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.5.7 4.8 2 6.8L3.2 29l6.8-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.3-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.6 9.9 10.3 5.3 16 5.3s10.4 4.6 10.4 10.3S21.7 26.1 16 26.1zm5.7-7.7c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 0 1-4.2-3.7c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.4 2.3 3.6 5.7 5c2.1.9 2.9 1 4 .8.6-.1 1.8-.8 2.1-1.5s.3-1.3.2-1.5-.3-.2-.6-.3z"/></svg></a>')
+
 def footer():
     nav = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:])
     return ('<footer class="ft"><div class="wrap"><div class="ft-grid">'
-            '<div><span class="logo-tile"><img src="images/logo.png" alt="Studio Cupido Beauty"></span><p style="margin-top:18px;max-width:30ch;font-size:14px">Studio Cupido, barbearia e estética. Premium na apresentação, humano no atendimento.</p></div>'
+            '<div><span class="logo-ft"><img src="images/logo-cupido-creme.png" alt="Studio Cupido Beauty" width="320" height="366" loading="lazy"></span><p style="margin-top:18px;max-width:30ch;font-size:14px">Studio Cupido, barbearia e estética. Premium na apresentação, humano no atendimento.</p></div>'
             f'<div><h4>Navegação</h4><ul>{nav}</ul></div>'
             '<div><h4>Contato</h4><ul><li><span class="ph-txt" data-cfg="endereco">[Endereço a confirmar]</span></li>'
             '<li><span class="ph-txt" data-cfg="whatsapp" data-icon="wa">[WhatsApp a confirmar]</span></li><li><span class="ph-txt" data-cfg="instagram" data-icon="ig">[Instagram oficial a confirmar]</span></li>'
-            '<li data-hide-empty><span data-cfg="outros"></span></li></ul></div>'
+            '<li data-hide-empty><span data-cfg="email"></span></li><li data-hide-empty><span data-cfg="outros"></span></li></ul></div>'
             '<div><h4>Funcionamento</h4><ul><li><span data-cfg="horario">Terça a sábado · <span class="ph-txt">[horários a confirmar]</span></span></li></ul>'
             '<h4 style="margin-top:28px">Agendamento</h4><ul>'
             f'<li>{book("masculino", "Agendamento Masculino", "ft-bk", arrow=False)}</li><li>{book("feminino", "Agendamento Feminino", "ft-bk", arrow=False)}</li></ul></div>'
-            '</div><div class="ft-bot"><span>Protótipo visual. Textos, preços, nomes e imagens são demonstrativos até a validação da gestão.</span><span>Agendamentos são feitos em aplicativo externo.</span></div></div></footer>')
+            '</div><div class="ft-bot"><span>Protótipo visual. Textos, preços, nomes e imagens são demonstrativos até a validação da gestão.</span><span>Agendamentos são feitos em aplicativo externo.</span></div></div></footer>' + WA_FLOAT)
 
 def public(fname, title, content, active=None, over=False, theme=''):
     PAGES[fname] = doc(title, header(active or fname, over) + content + footer(), body_cls=theme)
@@ -155,15 +164,21 @@ def page_hero(eyebrow, h1, lead, cls='', extra='', fig=None):
     return f'<section class="page-hero on-dark {cls}{" has-fig" if fig else ""}"><div class="wrap"><span class="eyebrow">{eyebrow}</span><h1>{h1}</h1><p class="lead">{lead}</p>{extra}</div>{f}</section>'
 
 def svc_row(s):
-    return (f'<div class="svc"><div><h3>{s["name"]}</h3><span class="cap-area">{AREA[s["area"]]}</span></div><p class="muted">{s["desc"]}</p><div class="dur">{dur(s)}</div><div class="price">{price(s)}</div>'
+    q = html.escape(_slug(' '.join([s['name'], s['desc'], s['group'], AREA[s['area']]])).replace('-', ' '), quote=True)
+    return (f'<div class="svc" data-q="{q}" data-svc="{s["id"]}" data-name="{html.escape(s["name"], quote=True)}" data-ar="{s["area"]}"><div><h3>{s["name"]}</h3><span class="cap-area">{AREA[s["area"]]}</span></div><p class="muted">{s["desc"]}</p><div class="dur">{dur(s)}</div><div class="price">{price(s)}</div>'
             f'{book(s["area"], "Agendar este serviço", "btn btn-o btn-s", svc=s["id"], arrow=False)}</div>')
 def svc_list(area):
     out = ''
     groups = GROUPS_F if area == 'feminino' else ['Barbearia']
     for g in groups:
         rows = ''.join(svc_row(s) for s in SERVICES if s['area'] == area and s['group'] == g)
-        head = f'<h3 class="grp-h">{g}</h3>' if area == 'feminino' else ''
-        out += f'<div class="grp-blk">{head}<div class="svc-list">{rows}</div></div>'
+        if area == 'feminino':
+            n = sum(1 for x in SERVICES if x['area'] == area and x['group'] == g); gid = f'g-{_slug(g)}'; first = g == groups[0]
+            out += (f'<div class="grp-blk acc{" open" if first else ""}"><h3 class="grp-h"><button type="button" class="acc-b" aria-expanded="{"true" if first else "false"}" aria-controls="{gid}">'
+                    f'<span>{g}</span><small>{n} {"serviço" if n == 1 else "serviços"}</small><i aria-hidden="true"></i></button></h3>'
+                    f'<div class="acc-p" id="{gid}"><div class="acc-in"><div class="svc-list">{rows}</div></div></div></div>')
+        else:
+            out += f'<div class="grp-blk"><div class="svc-list">{rows}</div></div>'
     return out
 DEMO_PRICES = '<div class="demo-note" style="margin-top:32px"><span class="prov" style="flex:none">Valores</span><span>Preços e durações conforme a lista do aplicativo de agendamento. "Consultar" indica valor informado no atendimento; "—" aguarda confirmação da gestão. O agendamento é concluído no aplicativo externo.</span></div>'
 
@@ -176,7 +191,7 @@ def pro_card(b):
     img = ph(slot=f'pro-{b["id"]}', alt=b['name'], label='', person=True, style=f'--cx:{30+b["id"]*9}%;--cy:{18+b["id"]*4}%')
     first = b['bio'].split('. ')[0].rstrip('.') + '.'
     return (f'<article class="bc">{img}<span class="role">{b["role"]}</span><h3>{b["name"]}</h3><p>{first}</p><div class="acts"><a class="link" href="perfil-{b["id"]}.html">Ver perfil</a>'
-            f'{book("masculino", "Agendar", "btn btn-p btn-s", pro=b["id"], arrow=False)}</div></article>')
+            f'{book(TEAM_AREA[b["team"]], "Agendar", "btn btn-p btn-s", pro=b["id"], arrow=False)}</div></article>')
 
 AMEN = [('cafe', 'Café especial para nossos clientes'), ('wifi', 'Ambiente confortável'), ('shield', 'Higiene e biossegurança'),
         ('users', 'Profissionais especializados'), ('sparkle', 'Atendimento único para cada cliente'), ('pin', 'Localização privilegiada')]
@@ -226,18 +241,31 @@ home = f'''
 <section class="sec mist"><div class="wrap hsi"><div class="stack"><span class="eyebrow">Consultoria de visagismo</span><h2>Descubra a sua melhor versão.</h2>
  <p class="lead">Analisamos traços, proporções e estilo de vida para criar uma imagem que valorize a sua identidade.</p>
  <a class="btn btn-o" href="masculino.html#visagismo">Conheça a consultoria {ARW}</a></div>
+ <figure class="hsi-face" aria-label="Exemplo de análise de visagismo: harmonia, simetria e individualidade"><img src="images/visagismo.jpg" alt="Cliente do Studio Cupido com as linhas de análise de visagismo" loading="lazy">
+  <svg viewBox="0 0 540 640" aria-hidden="true"><g class="gd">
+   <ellipse class="ln" cx="300" cy="370" rx="190" ry="255" transform="rotate(15 300 370)" pathLength="1"/>
+   <path class="ln" d="M334 18L167 632" pathLength="1"/>
+   <path class="ln th" d="M170 97L490 183M110 228L470 325M80 362L420 454M60 576L360 657" pathLength="1"/>
+   <path class="ln k" d="M335 327 L420 250 H530" pathLength="1"/><path class="ln k" d="M205 396 L340 396 L380 380 H530" pathLength="1"/><path class="ln k" d="M440 560 L480 520 H530" pathLength="1"/>
+   <circle class="dt" cx="196" cy="296" r="5"/><circle class="dt" cx="261" cy="287" r="5"/><circle class="dt" cx="174" cy="607" r="5"/><circle class="dt" cx="335" cy="327" r="5"/><circle class="dt" cx="205" cy="396" r="5"/><circle class="dt" cx="440" cy="560" r="5"/>
+   <text class="lb" x="530" y="238" text-anchor="end">Harmonia</text><text class="lb" x="530" y="368" text-anchor="end">Simetria</text><text class="lb" x="530" y="508" text-anchor="end">Individualidade</text>
+  </g></svg><span class="scan" aria-hidden="true"></span></figure>
  <div class="hsi-card"><span class="eyebrow">Método H·S·I</span><h3>Harmonia. Simetria. Individualidade.</h3>
   <div class="hsi-grid"><div><i>{icon("face",24)}</i>Análise facial completa</div><div><i>{icon("list",24)}</i>Recomendações personalizadas</div><div><i>{icon("sparkle",24)}</i>Estilo que valoriza</div><div><i>{icon("clock",24)}</i>Resultados mais duradouros</div></div>
   <a class="link" href="masculino.html#visagismo">Saiba mais sobre o método</a></div></div></section>
 
 <section class="sec navy on-dark"><div class="wrap split hist-home"><div class="stack" style="gap:32px"><span class="eyebrow">Nossa história</span>
- <p class="quote">Uma barbearia feita de <em>pessoas</em>, não de fórmulas.</p>
+ <p class="quote">Um studio feito de <em>pessoas</em>, não de fórmulas.</p>
  <p class="lead">Aqui, ninguém é um corte repetido. Cada cliente chega com uma história, um estilo e uma identidade que só ele tem, e é atendido de forma única: a gente escuta, entende quem você é e transforma isso em um visual que é seu.</p>
  <a class="btn btn-p" href="historia.html">Ler a história completa {ARW}</a></div>
- <div class="hist-art cut"><span class="ring"></span><div class="cut-arch"><img src="images/owner-terno.png" alt="Proprietário do Studio Cupido, de terno azul, de braços abertos" loading="lazy"></div></div></div></section>
+ <div class="hist-art cut"><span class="ring"></span><div class="cut-arch"><img class="for-m" src="images/owner-terno.png" alt="Proprietário do Studio Cupido, de terno azul, de braços abertos" loading="lazy"><img class="for-f" src="images/owner-terno-vinho.png" alt="Proprietário do Studio Cupido, de terno vinho, de braços abertos" loading="lazy"></div></div></div></section>
 
-<section class="sec deep dark on-dark"><div class="wrap"><div class="head-row"><div class="stack"><span class="eyebrow">A equipe</span><h2>Os cinco barbeiros<br>do Studio Cupido.</h2></div><a class="link" href="barbeiros.html">Conhecer a equipe</a></div>
- <div class="bar-row">{"".join(pro_card(b) for b in BARBERS)}</div><p class="cap" style="color:#8FA0B5;margin-top:28px">Apresentações e fotos dos profissionais serão incluídas conforme forem enviadas pela gestão.</p></div></section>
+<section class="sec deep dark on-dark home-team"><div class="wrap">
+ <div data-hz-show="m"><div class="head-row"><div class="stack"><span class="eyebrow">A equipe</span><h2>Os cinco barbeiros<br>do Studio Cupido.</h2></div><a class="link" href="barbeiros.html">Conhecer a equipe</a></div>
+ <div class="bar-row">{"".join(pro_card(b) for b in BARBERS)}</div><p class="cap" style="color:#8FA0B5;margin-top:28px">Apresentações e fotos dos profissionais serão incluídas conforme forem enviadas pela gestão.</p></div>
+ <div data-hz-show="f" hidden><div class="head-row"><div class="stack"><span class="eyebrow">Studio Cupido Beauty</span><h2>Quem cuida de você<br>no Beauty.</h2></div><a class="link" href="barbeiros.html#beauty">Conhecer a equipe</a></div>
+ <div class="bar-row three">{"".join(pro_card(b) for b in BEAUTY)}</div></div>
+</div></section>
 
 <section class="sec"><div class="wrap"><div class="split"><div class="stack"><span class="eyebrow">O espaço</span><h2>Um ambiente pensado para você se sentir bem.</h2>
  <p class="lead">Estrutura moderna, atendimento humanizado e uma experiência premium em cada detalhe.</p><a class="btn btn-o" href="historia.html#espaco">Conheça o espaço {ARW}</a></div>
@@ -254,11 +282,17 @@ def area_block(area, h2):
     return (f'<div class="area-block{th}" data-area="{area}" id="{area}"><div class="head-row" style="margin-bottom:24px"><div class="stack"><span class="eyebrow">{AREA[area]}</span><h2>{h2}</h2></div>'
             f'<a class="link" href="{area}.html">Conhecer o {AREA[area]}</a></div>{svc_list(area)}'
             f'<div class="area-cta">{book(area, cls="btn btn-p")}</div></div>')
+SEARCH = ('<div class="svc-search" data-search role="search">'
+          '<div class="ss-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>'
+          '<input type="search" id="svc-q" autocomplete="off" placeholder="Buscar: corte, barba, cílios…" aria-label="Buscar serviço" role="combobox" aria-expanded="false" aria-controls="svc-sug" aria-autocomplete="list">'
+          '<button type="button" class="ss-x" aria-label="Limpar busca" hidden>×</button></div>'
+          '<div class="ss-pop" id="svc-sug" role="listbox" hidden></div>'
+          '<p class="ss-count" aria-live="polite"></p></div>')
 FILTERS = ('<div class="filters" role="group" aria-label="Filtrar serviços"><button type="button" class="chip-f on" data-filter="all" aria-pressed="true">Todos</button>'
            '<button type="button" class="chip-f" data-filter="masculino" aria-pressed="false">Masculino</button><button type="button" class="chip-f f" data-filter="feminino" aria-pressed="false">Feminino</button></div>')
 public('servicos.html', 'Serviços | Studio Cupido',
     page_hero('Serviços', 'Escolha o seu.', 'Barbearia, estética e visagismo. Explore o catálogo e, quando decidir, agende no aplicativo de agendamento.') +
-    f'<section class="sec" style="padding-top:48px"><div class="wrap">{FILTERS}{area_block("masculino", "Estilo, técnica e identidade.")}<div class="gap-b"></div>{area_block("feminino", "Beleza, cuidado e autoestima.")}{DEMO_PRICES}</div></section>' + cta_final())
+    f'<section class="sec" style="padding-top:48px"><div class="wrap">{SEARCH}{FILTERS}<div class="ss-empty" hidden><h3>Nenhum serviço encontrado.</h3><p class="muted">Tente outra palavra ou fale com a gente: a equipe ajuda a escolher.</p><a class="btn btn-o btn-s" data-wa-link target="_blank" rel="noopener">Perguntar no WhatsApp</a></div>{area_block("masculino", "Estilo, técnica e identidade.")}<div class="gap-b"></div>{area_block("feminino", "Beleza, cuidado e autoestima.")}{DEMO_PRICES}</div></section>' + cta_final())
 
 # ================================================================ MASCULINO / FEMININO
 pillars = [('harm', 'Harmonia', 'O equilíbrio entre os seus traços, as suas proporções e o estilo que você quer comunicar.'),
@@ -284,19 +318,29 @@ public('feminino.html', 'Feminino | Studio Cupido',
     cta_final('Cuide de você, sem pressa.', 'Agende no aplicativo de agendamento feminino.', ('feminino',)), theme='theme-f')
 
 # ================================================================ CONTATO
+CI = {
+ 'pin': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>',
+ 'cal': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 17h2M11 17h2"/></svg>',
+ 'wa': '<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.5.7 4.8 2 6.8L3.2 29l6.8-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.3-3.9-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.6 9.9 10.3 5.3 16 5.3s10.4 4.6 10.4 10.3S21.7 26.1 16 26.1zm5.7-7.7c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 0 1-4.2-3.7c-.3-.5.3-.5.9-1.600.1-.2 0-.4 0-.5l-.9-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.4 2.3 3.6 5.7 5c2.1.9 2.9 1 4 .8.6-.1 1.8-.8 2.1-1.5s.3-1.3.2-1.5-.3-.2-.6-.3z"/></svg>',
+ 'ig': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>',
+ 'mail': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>',
+ 'more': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg>',
+}
+def ci(ic, label, body, attrs=''):
+    return f'<div class="ci ci-{ic}"{attrs}><span class="ci-ic" aria-hidden="true">{CI[ic]}</span><div class="ci-tx"><b>{label}</b>{body}</div></div>'
 public('contato.html', 'Contato | Studio Cupido',
     page_hero('Contato', 'Fale com o<br>Studio Cupido.', 'Endereço, canais de atendimento e horários de funcionamento.') +
-    f'<section class="sec"><div class="wrap info-grid"><div class="info-list">'
-    f'<div><b>Endereço</b><span class="ph-txt" data-cfg="endereco">[Endereço a confirmar]</span></div>'
-    f'<div><b>Funcionamento</b><span data-cfg="horario">Terça a sábado · <span class="ph-txt">[horários a confirmar]</span></span></div>'
-        f'<div><b>WhatsApp</b><span class="ph-txt" data-cfg="whatsapp">[WhatsApp oficial a confirmar]</span></div>'
-    f'<div><b>Instagram</b><span class="ph-txt" data-cfg="instagram">[Instagram oficial a confirmar]</span></div>'
-    f'<div><b>E-mail</b><span class="ph-txt" data-cfg="email">[E-mail a confirmar]</span></div>'
-    f'<div data-hide-empty><b>Outros canais</b><span data-cfg="outros"></span></div></div>'
-    f'<div class="stack" style="gap:28px"><div class="pn bk-card" id="agendamento"><span class="eyebrow">Agendamento</span><h2>Agende no aplicativo.</h2>'
-    f'<p class="muted" style="margin-bottom:20px">O site apresenta o Studio Cupido. O agendamento acontece em um aplicativo externo; escolha a área para continuar.</p>'
-    f'<div class="btn-row">{book("masculino")}{book("feminino", cls="btn btn-wine")}</div></div>'
-    f'<div class="map-ph">{ph(cls="t3", label="Mapa · a incluir")}</div></div></div></section>')
+    '<section class="sec"><div class="wrap ct-grid"><div class="info-list ct-list">'
+    + ci('pin', 'Endereço', '<span class="ph-txt" data-cfg="endereco">[Endereço a confirmar]</span>')
+    + ci('cal', 'Funcionamento', '<span data-cfg="horario">Terça a sábado · <span class="ph-txt">[horários a confirmar]</span></span>')
+    + ci('wa', 'WhatsApp', '<span class="ph-txt" data-cfg="whatsapp">[WhatsApp oficial a confirmar]</span>')
+    + ci('ig', 'Instagram', '<span class="ph-txt" data-cfg="instagram">[Instagram oficial a confirmar]</span>')
+    + ci('mail', 'E-mail', '<span data-cfg="email"></span>', ' data-hide-empty')
+    + ci('more', 'Outros canais', '<span data-cfg="outros"></span>', ' data-hide-empty')
+    + f'</div><div class="map-box" data-map><div class="map-fr"></div><a class="btn btn-o btn-s" data-map-link target="_blank" rel="noopener">Abrir no Google Maps {ARW}</a></div>'
+    f'<div class="pn bk-card ct-book" id="agendamento"><div><span class="eyebrow">Agendamento</span><h2>Agende no aplicativo.</h2>'
+    f'<p class="muted">O site apresenta o Studio Cupido. O agendamento acontece em um aplicativo externo; escolha a área para continuar.</p></div>'
+    f'<div class="btn-row">{book("masculino")}{book("feminino", cls="btn btn-wine")}</div></div></div></section>')
 
 
 # ================================================================ RESULTADOS
@@ -319,12 +363,12 @@ chap = [('Origem', 'Como tudo começou', 'Espaço para contar como nasceu o Stud
         ('Futuro', 'Para onde vamos', 'Espaço para a visão de futuro da barbearia.')]
 def chap_art(i):
     if i == 0: return ph(slot='fachada', alt='Fachada do local onde o Studio Cupido começou', label='Onde tudo começou')
-    if i == 1: return '<div class="ph has-img o"><img class="real" src="images/owner-bemvindo.jpg" alt="Proprietário do Studio Cupido" loading="lazy"></div>'
+    if i == 1: return ''   # trajetória do proprietário: sem foto
     return ph(cls=('t2' if i % 3 == 1 else ('' if i % 2 else 't3')) + (' o' if i % 3 == 0 else ''), label='Foto demonstrativa', style=f'--cx:{40+i*6}%')
 public('historia.html', 'Nossa história | Studio Cupido',
     page_hero('Studio Cupido · desde 2026', 'Nossa história', 'Origem, trajetória e visão de futuro do estúdio e de quem o criou.', '', '<div style="margin-top:20px"><span class="prov" style="color:#9FB3D6">Os textos desta página são provisórios</span></div>') +
     '<section class="sec" style="padding-top:40px"><div class="wrap">' + ''.join(
-        f'<div class="chap"><div class="chap-art">{chap_art(i)}</div><div><span class="eyebrow">{e}</span><h2>{t}</h2><p class="lead">{d}</p><p class="muted">Texto demonstrativo para validar a composição editorial. Será substituído pela história verdadeira, fornecida pela gestão.</p></div></div>'
+        (f'<div class="chap"><div class="chap-art">{chap_art(i)}</div><div>' if chap_art(i) else '<div class="chap noart"><div>') + f'<span class="eyebrow">{e}</span><h2>{t}</h2><p class="lead">{d}</p><p class="muted">Texto demonstrativo para validar a composição editorial. Será substituído pela história verdadeira, fornecida pela gestão.</p></div></div>'
         for i, (e, t, d) in enumerate(chap)) + '</div></section>'
     f'<section class="sec mist" id="espaco"><div class="wrap"><div class="head-row"><div class="stack"><span class="eyebrow">O espaço</span><h2>Um ambiente pensado<br>para você se sentir bem.</h2></div><span class="prov muted">Fotografias reais a incluir</span></div>'
     f'<div class="gal">{ph(slot="interior", cls="g1", alt="Parede e janelas do estúdio")}{ph(slot="cadeiras", cls="g2 t2 oval", tag=False)}{ph(slot="decoracao", cls="g3 t3")}{ph(slot="fachada", cls="g4", tag=False)}{ph(slot="ferramentas", cls="g5 t2")}{ph(slot="equipe", cls="g6 t3 oval", tag=False)}</div>{amen(True)}'
@@ -338,7 +382,7 @@ def team_block(team, eyebrow, h2, theme=''):
         + (f'<div class="chips" style="margin-top:20px">' + ''.join(f'<span class="chip">{x}</span>' for x in p["spec"]) + '</div>' if p.get('spec') else '')
         + f'<div class="acts"><a class="btn btn-o" href="perfil-{p["id"]}.html">Ver perfil</a>{book(area, "Agendar com " + p["name"], "btn btn-p", pro=p["id"])}</div></div></article>'
         for p in PROS if p['team'] == team)
-    return f'<section class="sec {theme}" style="padding-top:56px"><div class="wrap"><div class="head-row"><div class="stack"><span class="eyebrow">{eyebrow}</span><h2>{h2}</h2></div></div>{rows}</div></section>'
+    return f'<section class="sec {theme}" id="{team}" style="padding-top:56px;scroll-margin-top:96px"><div class="wrap"><div class="head-row"><div class="stack"><span class="eyebrow">{eyebrow}</span><h2>{h2}</h2></div></div>{rows}</div></section>'
 
 public('barbeiros.html', 'Equipe | Studio Cupido',
     page_hero('Nossa equipe', 'Quem cuida<br>de você.', 'Barbeiros e profissionais do Studio Cupido Beauty. Conheça cada um e, quando quiser, agende no aplicativo de agendamento.') +

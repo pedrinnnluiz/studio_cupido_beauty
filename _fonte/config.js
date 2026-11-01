@@ -41,9 +41,9 @@ window.CUPIDO_CONFIG = {
   },
   contato: {
     endereco:  'Rua Raul Pompéia, 195 · Vila Jardini · 18044-020 · Sorocaba/SP',
-    whatsapp:  'https://api.whatsapp.com/send/?phone=15996148166&text=Olá%2C+gostaria+de+fazer+um+agendamento&type=phone_number&app_absent=0&utm_source=ig',
+    whatsapp:  'https://api.whatsapp.com/send/?phone=5515996148166&text=Olá%2C+gostaria+de+fazer+um+agendamento&type=phone_number&app_absent=0&utm_source=ig',
     instagram: 'https://www.instagram.com/studiocupidooficial/',
-    email:     '',   // [PENDENTE]
+    email:     'atendimento@studiocupido.com.br',
     outros: [        // [OPCIONAL] outros canais oficiais: { nome: 'TikTok', url: 'https://...' }
     ]
   },
@@ -88,9 +88,9 @@ window.CUPIDO_CONFIG = {
     'cat-feminino': 'images/owner-terno-vinho.png', // Imagem principal do Feminino (recorte PNG)
     'pro-1':        'images/amadeu.jpg',        // Amadeu Diaz
     'pro-2':        '',                         // Dom Bigode
-    'pro-3':        '',                         // Gustavo Adrian
+    'pro-3':        '',                         // Gustavo
     'pro-4':        '',                         // Matheus
-    'pro-5':        '',                         // Barbeiro 05 (a definir)
+    'pro-5':        '',                         // Adrian
     'pro-6':        'images/chrys-gerbo.jpg',   // Chrys Gerbo
     'pro-7':        'images/carolina.jpg',      // Carolina
     'pro-8':        'images/cinthia.jpg'        // Cinthia
